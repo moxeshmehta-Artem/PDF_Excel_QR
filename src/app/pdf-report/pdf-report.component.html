@@ -1,0 +1,26 @@
+<div class="report-container">
+  <h2>User Report</h2>
+  <button (click)="exportPdf()" class="export-btn">Export to PDF</button>
+  <button (click)="exportExcel()" class="export-btn excel-btn">Export to Excel</button>
+    <button (click)="genQr()" class="export-btn excel-btn">Qr Code</button>
+
+
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
